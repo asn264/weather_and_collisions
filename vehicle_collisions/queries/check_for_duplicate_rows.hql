@@ -1,0 +1,5 @@
+select count(*)
+from
+(
+   select distinct datetime,borough,zip_code,latitude,longitude,location,on_street,cross_street,off_street,persons_injured,persons_killed,pedestrians_injured,pedestrians_killed,cyclist_injured,cyclist_killed,motorist_injured,motorist_killed,contributing_factor_vehicle_1,contributing_factor_vehicle_2,contributing_factor_vehicle_3,contributing_factor_vehicle_4,contributing_factor_vehicle_5,unique_key,vehicle_type_code_1,vehicle_type_code_2,vehicle_type_code_3,vehicle_type_code_4,vehicle_type_code_5 from collisions_2015
+) x;
