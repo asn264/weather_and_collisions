@@ -1,0 +1,1 @@
+SELECT COUNT(*) FROM collisions_2015 WHERE persons_injured < 0 OR persons_killed < 0 OR pedestrians_injured < 0 OR pedestrians_killed < 0 OR cyclist_injured < 0 OR cyclist_killed < 0 OR motorist_injured < 0 OR motorist_killed < 0;

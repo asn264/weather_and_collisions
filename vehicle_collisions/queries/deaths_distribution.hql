@@ -1,0 +1,1 @@
+SELECT persons_killed,COUNT(*) FROM collisions_2015 WHERE persons_killed IS NOT NULL GROUP BY persons_killed;
