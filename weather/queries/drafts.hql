@@ -1,0 +1,2 @@
+--Average hourly visibility 
+--Average weather reports by month
