@@ -1,0 +1,4 @@
+Contributing factors for bike deaths:
+
+- Looked at cited factors for bike deaths and injuries across NYC and in Brooklyn (much higher rate)
+- Also looked at cited factors for bike deaths and injuries across NYC and in Brooklyn when temperature is at least 60 degrees
