@@ -1,0 +1,9 @@
+6% of the days in which there were temperatures above 80 degrees, there was a cyclist death, whereas there was a cyclist death in less than 2% of the days in every other temperature bucket.
+
+Over 90% of the days that had temperatures in the 70 degree bucket or higher had a cyclist injury. In fact, it was 100% for the 9 days that had temperatures between 90 and 100 degrees. 
+
+Even though higher temperatures are generally associated with more non-motorist deaths and injuries, there were no pedestrian deaths on days with temperatures in the 90 degree bucket (between 90 and 100 degrees). Perhaps very warm temperatures are deterring people from walking outside.
+
+Out of the days with temperature below 40 degrees, the proportion with bike injuries dropped below 67% and even dropped below 30% in extremely cold weather, which we defined as below 20 degrees. On the other hand, pedestrian injuries didn't see as steep of a decline, as the proportion of days with pedestrian injuries stayed above 80% for those with temperatures between 10 degrees and 40 degrees, and was 66% for days with temperatures between 0 and 10 degrees. We suspect this is because bicyclists often have alternatives to biking in poor weather conditions, while walking is a part of most people's commutes.
+
+While there were some trends between non-motorist casualties and temperature, motorist injuries and deaths are largely uninfluenced by temperature. There are motorist injuries just about every day of the year, regardless of injury, and the % of days with motorist deaths for each temperature bucket was within 8-14% of the days in that temperature bucket in general if we exclude the two extremes of 0-9 degrees and 90+ degrees. 

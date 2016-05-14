@@ -26,8 +26,9 @@ CREATE EXTERNAL TABLE collisions(
 	vehicle_type_code_2 string, 
 	vehicle_type_code_3 string, 
 	vehicle_type_code_4 string, 
-	vehicle_type_code_5 string)
+	vehicle_type_code_5 string,
+	id int)
 ROW FORMAT DELIMITED
-FIELDS TERMINATED BY ','
+FIELDS TERMINATED BY '\t'
 STORED AS TEXTFILE
 LOCATION 's3://ass502-ds1004-project/input/vehicle_collisions/';

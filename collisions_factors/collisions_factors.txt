@@ -1,0 +1,9 @@
+When looking at motor-on-motor collisions, which we defined as ones that don't have bicycles listed in the main two vehicle types or any pedestrian/cyclist casualties, we notice that the top 5 contributing factors are: 
+
+1. Left blank
+2. Unspecified
+3. Driver Inattention/Distraction
+4. Fatigued/Drowsy
+5. Other Vehicular
+
+The top 5 contributing factors for motor-on-motor collisions during warm temperatures (defined as above 80 degrees) are exactly the same 5, and in the same order. However, when we look at motor-on-motor collisions during very cold temperatures (defined as below 30 degrees), the top 4 are the same while 'Pavement Slippery’ takes 5th place. Thus, even though we don't see a correlation between snow_depth and number of accidents, it seems that snowy/icy weather conditions are more often responsible for the accidents that do happen during cold weather. 

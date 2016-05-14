@@ -7,17 +7,17 @@ Also, removes '\n' that were inserted in the middle of a row and resulted in mal
 import sys
 import csv
 
-actual_field_counts = 0
 temp_line = None
 
 with open('../data/NYPD_Motor_Vehicle_Collisions.csv','r') as f:
 	with open('../data/clean_NYPD_Motor_Vehicle_Collisions.csv','w') as out_f:
+		
 		count = 0
 		for line in f:
 			#for the first line, combine the date and time columns to a single datetime column and count the number of fields
 			if count == 0:
 				date,time,other_data = line.split(',',2)
-				out_f.write('DATETIME,'+other_data)
+				out_f.write('DATETIME,'+other_data.strip('\n')+',ID\n')
 				count += 1
 
 				actual_field_counts = line.count(',') + 1
@@ -41,7 +41,8 @@ with open('../data/NYPD_Motor_Vehicle_Collisions.csv','r') as f:
 							time = '0'+time
 						time = time+':00'
 
-						out_f.write(year+'-'+month+'-'+day+' '+time+','+other_data)
+						out_f.write(year+'-'+month+'-'+day+' '+time+','+other_data.strip('\n')+','+str(count)+'\n')
+						count += 1
 
 						temp_line = None
 				#for data, format the date and time into a single column and add seconds		
@@ -55,4 +56,14 @@ with open('../data/NYPD_Motor_Vehicle_Collisions.csv','r') as f:
 						time = '0'+time
 					time = time+':00'
 
-					out_f.write(year+'-'+month+'-'+day+' '+time+','+other_data)
+					out_f.write(year+'-'+month+'-'+day+' '+time+','+other_data.strip('\n')+','+str(count)+'\n')
+					count += 1
+
+field_counts = {}
+with open('../data/clean_NYPD_Motor_Vehicle_Collisions.csv','r') as f:
+	with open('../data/clean_NYPD_Motor_Vehicle_Collisions.tsv','w') as out_f:
+		reader = csv.reader(f, delimiter=',', quotechar='"')
+		writer = csv.writer(out_f, delimiter='\t')
+		for row in reader:
+			writer.writerow(row)
+			field_counts[len(row)] = field_counts.get(len(row),0)+1

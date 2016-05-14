@@ -26,7 +26,8 @@ CREATE EXTERNAL TABLE collisions_2015(
 	vehicle_type_code_2 string, 
 	vehicle_type_code_3 string, 
 	vehicle_type_code_4 string, 
-	vehicle_type_code_5 string)
+	vehicle_type_code_5 string,
+	id int)
 ROW FORMAT DELIMITED
 FIELDS TERMINATED BY '\t'
 STORED AS TEXTFILE
