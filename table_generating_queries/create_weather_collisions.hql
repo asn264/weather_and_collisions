@@ -1,3 +1,5 @@
+--This query loads the weather_collisions data from an S3 bucket into a table called weather_collisions
+
 CREATE EXTERNAL TABLE weather_collisions
 (
 datetime timestamp,           	                    

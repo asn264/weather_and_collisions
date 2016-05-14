@@ -1,3 +1,5 @@
+--This script loads the weather data from an S3 bucket into a Hive table called weather
+
 CREATE EXTERNAL TABLE weather( 
 	  USAF_station_num string, 
 	  WBAN_station_num string,

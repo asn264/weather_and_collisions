@@ -1,3 +1,5 @@
+--This table assumes that the weather and collisions_2015 tables have already been generated, the output of this query can be saved as a tsv file
+
 --Join collisions with all weather records on the same day, and then with all weather records on the previous day. Then take the union
 CREATE TABLE partial_cross_prod AS
         SELECT *, unix_timestamp(collisions_2015.datetime) - unix_timestamp(weather.EST_time) as diff

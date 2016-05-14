@@ -1,3 +1,5 @@
+--This query loads the cleaned collisions data from an S3 bucket and creates a Hive table called collisions
+
 CREATE EXTERNAL TABLE collisions( 
 	datetime timestamp, 
 	borough string, 

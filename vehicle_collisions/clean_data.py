@@ -1,7 +1,12 @@
 '''
 Author: Akash Shah
+This script cleans the Motor Vehicle Collisions data. The data was not uploaded to Git because of its size, so it must be added to the data
+folder as specified in the path below.
+
+The script does the following:
 Converts date and time stamp into a datetime column that works with Hive.
 Also, removes '\n' that were inserted in the middle of a row and resulted in malformed data.
+Adds an ID field that is a unique identifier.
 '''
 
 import sys

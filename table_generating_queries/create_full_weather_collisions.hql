@@ -1,3 +1,4 @@
+--This script loads the full_weather_collisions data from an S3 bucket into a Hive table called full_weather_collisions
 CREATE EXTERNAL TABLE full_weather_collisions
 (
 datetime timestamp,           	                    

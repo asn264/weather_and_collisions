@@ -1,3 +1,5 @@
+--This script loads the 2015_vehicle_collisions data from an S3 bucket into a Hive table called 2015_vehicle_collisions
+
 CREATE EXTERNAL TABLE collisions_2015( 
 	datetime timestamp, 
 	borough string, 
