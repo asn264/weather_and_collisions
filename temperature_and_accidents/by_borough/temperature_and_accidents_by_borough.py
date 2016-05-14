@@ -1,9 +1,11 @@
+'''
+Aditi Nair
+May 2016
+Seeing how the relationship between temperature and accidents vary by borough.
+'''
+
 import matplotlib.pyplot as plt
 import numpy as np
-
-'''
-
-'''
 
 def temp_distribution():
 
@@ -129,8 +131,8 @@ def plot_accidents_by_temp_by_borough():
 	plt.plot(buckets, baseline_percents, linestyle='--', marker='o', label='% Weather')
 	plt.xlabel('Degrees Farenheit')
 	plt.legend(loc='upper left', prop={'size':9})
-	plt.show()
-
+	plt.savefig('accidents_by_temp_by_borough.jpg')
+	plt.clf()
 
 
 def plot_accidents_by_temp_by_borough_ratio():
@@ -154,7 +156,8 @@ def plot_accidents_by_temp_by_borough_ratio():
 	plt.xlabel('Degrees Farenheit')
 	plt.legend(loc='upper left', prop={'size':9})
 	plt.title('Ratio of Collisions Percents to Weather Occurence Percents')
-	plt.show()	
+	plt.savefig('accidents_by_temp_by_borough_ratio.jpg')	
+	plt.clf()
 
 
 def plot_accidents_by_temp_by_type_by_borough_ratio():
@@ -196,9 +199,9 @@ def plot_accidents_by_temp_by_type_by_borough_ratio():
 		plt.plot(buckets, cyclist_injured_ratios, linestyle='--', marker='o', label='Cyclist Injured')
 		plt.plot(buckets, cyclist_killed_ratios, linestyle='--', marker='o', label='Cyclist Killed')
 		plt.plot(buckets, np.ones(len(buckets)), label='Baseline')
-	
+		plt.xlabel('Degrees Farenheit')
 		plt.legend(loc='upper left', prop={'size':9})
-		plt.savefig('accidents_by_type_by_temp_'+borough+'.pdf')
+		plt.savefig('accidents_by_type_by_temp_ratio'+borough+'.jpg')
 		plt.clf()
 
 plot_accidents_by_temp_by_borough()

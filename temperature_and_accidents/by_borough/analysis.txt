@@ -1,4 +1,23 @@
-Contributing factors for bike deaths:
 
-- Looked at cited factors for bike deaths and injuries across NYC and in Brooklyn (much higher rate)
-- Also looked at cited factors for bike deaths and injuries across NYC and in Brooklyn when temperature is at least 60 degrees
+Try and find conditions under which accidents are more frequent in order to better inform city residents and first-responders
+
+- Many columns in weather dataset are sparse and not immediateky useful for deeper analysis
+- However temperature is almost always defined
+- From eyeballing temperature bucket vs accident count query results, look like there is a relationship
+- Plot % of times weather bucket is recorded vs % of times accident is recorded in weather bucket
+- Looks like relationship but unclear
+- Create a lift chart and see significant results in warmer temperatures
+- Break it down by accident type and see massive spike in hot weather (also lift curve)
+
+Broke it down by borough bc different boroughs appear to have different demographics and availability of public transportation, parking, home garages etc. 
+
+- Review plots and lift curves
+- Highlight outliers
+- Recall sparsity but still evaluate: in particular bike deaths have a huge uptick and especially in Brooklyn
+
+Looked at contributing factors in accidents of interest:
+- Mainly not recorded or empty, but when recorded, driver inattention
+- Particularly in Brooklyn there was a surprising number of "failed to yield" bike related accidents
+
+- Then tried to see where in particular in Brooklyn there were bike accidents and whether the locations varied over time
+- Bridge entrances and near Prospect Park: high traffic and also close to densely populated residential areas

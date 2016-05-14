@@ -1,3 +1,10 @@
+'''
+Aditi Nair
+May 2016
+
+Comparing the distribution of temperature events and collisions.
+'''
+
 import matplotlib.pyplot as plt
 import numpy as np
 
@@ -99,7 +106,8 @@ def plot_temp_and_collisions_by_type():
 	plt.plot(temp_buckets, temp_percents, linestyle='--', marker='o', label='Percent of Weather Events')
 	plt.xlabel('Degrees Farenheit')
 	plt.legend(loc=2)
-	plt.show()
+	plt.savefig('temp_and_collisions_by_type.jpg')
+	plt.clf()
 
 
 def plot_temp_and_collisions_by_type_ratio():
@@ -113,15 +121,16 @@ def plot_temp_and_collisions_by_type_ratio():
 	cyclist_killed_ratios = [cyclist_killed_percents[i]/temp_percents[i] for i in range(len(temp_buckets))]
 
 	plt.title('Ratio of Weather Events versus Collisions by Type given Temperature')
-	plt.plot(temp_buckets, ped_injured_ratios, linestyle='dotted', marker='o', label='Pedestrian Injured')
-	plt.plot(temp_buckets, ped_killed_ratios, linestyle='dotted', marker='o', label='Pedestrians Killed')
-	plt.plot(temp_buckets, cyclist_injured_ratios, linestyle='dotted', marker='o', label='Cyclists Injured')
-	plt.plot(temp_buckets, cyclist_killed_ratios, linestyle='dotted', marker='o', label='Cyclists Killed')
+	plt.plot(temp_buckets, ped_injured_ratios, linestyle='dotted', marker='o', label='Pedestrian Injured Ratio')
+	plt.plot(temp_buckets, ped_killed_ratios, linestyle='dotted', marker='o', label='Pedestrians Killed Ratio')
+	plt.plot(temp_buckets, cyclist_injured_ratios, linestyle='dotted', marker='o', label='Cyclists Injured Ratio')
+	plt.plot(temp_buckets, cyclist_killed_ratios, linestyle='dotted', marker='o', label='Cyclists Killed Ratio')
 
-	plt.plot(temp_buckets, np.ones(len(temp_buckets)))
+	plt.plot(temp_buckets, np.ones(len(temp_buckets)), label='Baseline')
 	plt.xlabel('Degrees Farenheit')
 	plt.legend(loc=2)
-	plt.show()
+	plt.savefig('temp_and_collisions_by_type_ratio.jpg')
+	plt.clf()
 
 
 def plot_ratio():
@@ -132,10 +141,12 @@ def plot_ratio():
 	ratios = [accident_percents[i]/temp_percents[i] for i in range(len(temp_buckets))]
 
 	plt.title('Ratio of Weather Events versus Collisions given Temperature')
-	plt.plot(temp_buckets, ratios, linestyle='dotted', marker='o')
-	plt.plot(temp_buckets, np.ones(len(temp_buckets)))
+	plt.plot(temp_buckets, ratios, linestyle='dotted', marker='o', label='Ratio')
+	plt.plot(temp_buckets, np.ones(len(temp_buckets)), label='Baseline')
 	plt.xlabel('Degrees Farenheit')
-	plt.show()
+	plt.legend(loc=2)
+	plt.savefig('ratio.jpg')
+	plt.clf()
 
 
 def plot_temp_and_collisions():
@@ -147,12 +158,12 @@ def plot_temp_and_collisions():
 	plt.plot(temp_buckets, temp_percents, linestyle='--', marker='o', label='Percent of Weather Events')
 	plt.plot(temp_buckets, accident_percents, linestyle='--', marker='o', label='Percent of Accident Events')
 	plt.xlabel('Degrees Farenheit')
-	plt.legend()
-	plt.show()
+	plt.legend(loc=2)
+	plt.savefig('temp_and_collisions.jpg')
+	plt.clf()
 
 
-
-#plot_temp_and_collisions()
-#plot_ratio()
+plot_temp_and_collisions()
+plot_ratio()
 plot_temp_and_collisions_by_type()
 plot_temp_and_collisions_by_type_ratio()
